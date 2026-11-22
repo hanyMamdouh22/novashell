@@ -1,0 +1,26 @@
+# Virtual environments & Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+
+# Build & package artifacts (publish .deb via GitHub Releases)
+*.deb
+*.rpm
+deb_build/
+build/
+dist/
+
+# Secrets, local config & runtime databases
+.env
+config.env
+*.db
+*.sqlite*
+
+# OS & editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

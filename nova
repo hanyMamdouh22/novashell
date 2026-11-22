@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec "$HOME/novashell/.venv/bin/python" -m novashell.cli "$@"
