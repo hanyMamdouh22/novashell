@@ -64,22 +64,22 @@ Most terminal AI wrappers blindly generate shell snippets or execute destructive
 
 ```mermaid
 flowchart TD
-    U[Engineer Prompt / CLI] --> A[NovaAgent · ReAct Engine]
-    A <--> M[Gemini API · Multi-Model Auto-Failover]
-    A --> C[Live OS Context Collector<br/>Ubuntu / RHEL / Windows]
-    A --> G{Zero-Trust Security Guard}
+    U["Engineer Prompt / CLI"] --> A["NovaAgent - ReAct Engine"]
+    A <--> M["Gemini API - Multi-Model Auto-Failover"]
+    A --> C["Live OS Context Collector<br/>Ubuntu, RHEL, Windows"]
+    A --> G{"Zero-Trust Security Guard"}
 
-    G -->|BLOCKED| B[Reject & Log to SQLite Audit]
-    G -->|SAFE · Read-Only| E[Execution Layer<br/>Bash / PowerShell / Plugins]
-    G -->|CONFIRM| P[Interactive User Approval<br/>or Live Unified Diff]
+    G -->|"BLOCKED"| B["Reject and Log to SQLite Audit"]
+    G -->|"SAFE - Read-Only"| E["Execution Layer<br/>Bash, PowerShell, Plugins"]
+    G -->|"CONFIRM"| P["Interactive User Approval<br/>or Live Unified Diff"]
 
-    P -->|Approved| T[Time-Machine Snapshot Engine]
-    P -->|Denied| B
+    P -->|"Approved"| T["Time-Machine Snapshot Engine"]
+    P -->|"Denied"| B
     T --> E
 
-    E --> R[Local Secret Redaction Filter]
+    E --> R["Local Secret Redaction Filter"]
     R --> A
-    E --> DB[(SQLite Audit Log &<br/>Rollback History)]
+    E --> DB[("SQLite Audit Log and<br/>Rollback History")]
 ```
 
 ---
